@@ -42,13 +42,12 @@ public class HelloController {
 
         bundle = ResourceBundle.getBundle("messages", locale);
 
-        // Update UI labels
+
         welcomeText.setText(bundle.getString("title"));
         keyNameField.setPromptText(bundle.getString("jobTitleKey"));
         translationField.setPromptText(bundle.getString("translation"));
         saveButton.setText(bundle.getString("save"));
 
-        // Load data from DB
         fetchLocalizedData(locale.getLanguage());
     }
 
